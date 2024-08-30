@@ -22,10 +22,10 @@ import marshal
 import struct
 import shutil
 
-from codernitydb3.storage import IU_Storage, DummyStorage
+from slitheringdb.storage import IU_Storage, DummyStorage
 
 try:
-    from codernitydb3 import __version__
+    from slitheringdb import __version__
 except ImportError:
     from __init__ import __version__
 

@@ -20,17 +20,17 @@ import os
 import random
 from hashlib import md5
 
-from codernitydb3.database import Database, RecordDeleted, RecordNotFound
-from codernitydb3.database import DatabaseException, RevConflict, DatabasePathException, DatabaseConflict, PreconditionsException, IndexConflict
+from slitheringdb.database import Database, RecordDeleted, RecordNotFound
+from slitheringdb.database import DatabaseException, RevConflict, DatabasePathException, DatabaseConflict, PreconditionsException, IndexConflict
 
-from codernitydb3.hash_index import HashIndex, UniqueHashIndex, MultiHashIndex
-from codernitydb3.index import IndexException, TryReindexException, IndexNotFoundException, IndexPreconditionsException
+from slitheringdb.hash_index import HashIndex, UniqueHashIndex, MultiHashIndex
+from slitheringdb.index import IndexException, TryReindexException, IndexNotFoundException, IndexPreconditionsException
 
-from codernitydb3.tree_index import TreeBasedIndex, MultiTreeBasedIndex
+from slitheringdb.tree_index import TreeBasedIndex, MultiTreeBasedIndex
 
-from codernitydb3.debug_stuff import database_step_by_step
+from slitheringdb.debug_stuff import database_step_by_step
 
-from codernitydb3 import rr_cache
+from slitheringdb import rr_cache
 
 try:
     from collections import Counter
@@ -1079,7 +1079,7 @@ class DB_Tests:
         assert db.get('ind', 'a', with_doc=True)['doc']['name'] == 'a'
 
     def test_patch_flush_fsync(self, tmpdir):
-        from codernitydb3.patch import patch_flush_fsync
+        from slitheringdb.patch import patch_flush_fsync
         db = self._db(os.path.join(str(tmpdir), 'db'))
         db.create()
         patch_flush_fsync(db)  # patch it

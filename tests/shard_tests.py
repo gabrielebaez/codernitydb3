@@ -16,9 +16,9 @@
 # limitations under the License.
 
 import pytest
-from codernitydb3.database import Database
-from codernitydb3.sharded_hash import ShardedUniqueHashIndex
-from codernitydb3.index import IndexPreconditionsException
+from slitheringdb.database import Database
+from slitheringdb.sharded_hash import ShardedUniqueHashIndex
+from slitheringdb.index import IndexPreconditionsException
 
 
 class ShardedUniqueHashIndex5(ShardedUniqueHashIndex):

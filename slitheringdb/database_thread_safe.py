@@ -18,8 +18,8 @@
 
 from threading import RLock
 
-from codernitydb3.database_safe_shared import SafeDatabase
-from codernitydb3.env import cdb_environment
+from slitheringdb.database_safe_shared import SafeDatabase
+from slitheringdb.env import cdb_environment
 
 cdb_environment['mode'] = "threads"
 cdb_environment['rlock_obj'] = RLock

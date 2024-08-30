@@ -23,20 +23,20 @@ from inspect import getsource, getfullargspec
 from random import randrange
 
 # for custom indexes
-from codernitydb3.storage import Storage, IU_Storage
-from codernitydb3.hash_index import (IU_UniqueHashIndex, IU_HashIndex,
+from slitheringdb.storage import Storage, IU_Storage
+from slitheringdb.hash_index import (IU_UniqueHashIndex, IU_HashIndex,
                                      HashIndex, UniqueHashIndex)
 # normal imports
 
-from codernitydb3.index import (ElemNotFound, DocIdNotFound, IndexException,
+from slitheringdb.index import (ElemNotFound, DocIdNotFound, IndexException,
                                 Index, TryReindexException, ReindexException,
                                 IndexNotFoundException, IndexConflict)
-from codernitydb3.indexcreator import Parser
+from slitheringdb.indexcreator import Parser
 
-from codernitydb3.misc import NONE
+from slitheringdb.misc import NONE
 
-from codernitydb3.env import cdb_environment
-from codernitydb3.misc import random_hex_4
+from slitheringdb.env import cdb_environment
+from slitheringdb.misc import random_hex_4
 
 
 def header_for_indexes(index_name,

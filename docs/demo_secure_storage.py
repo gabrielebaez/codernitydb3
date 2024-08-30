@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-from codernitydb3.hash_index import UniqueHashIndex
-from codernitydb3.storage import Storage
-from codernitydb3.database import Database
+from slitheringdb.hash_index import UniqueHashIndex
+from slitheringdb.storage import Storage
+from slitheringdb.database import Database
 from hashlib import sha256
 
 import salsa20

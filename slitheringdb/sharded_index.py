@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from codernitydb3.index import Index
+from slitheringdb.index import Index
 # from codernitydb3.env import cdb_environment
 # import warnings
 

@@ -20,14 +20,14 @@ import os
 import random
 from hashlib import md5
 
-from codernitydb3.database import Database, RecordDeleted, RecordNotFound
-from codernitydb3.database import DatabaseException
+from slitheringdb.database import Database, RecordDeleted, RecordNotFound
+from slitheringdb.database import DatabaseException
 
-from codernitydb3.hash_index import HashIndex, UniqueHashIndex
-from codernitydb3.index import IndexException
-from codernitydb3.misc import random_hex_32
+from slitheringdb.hash_index import HashIndex, UniqueHashIndex
+from slitheringdb.index import IndexException
+from slitheringdb.misc import random_hex_32
 
-from codernitydb3 import rr_cache
+from slitheringdb import rr_cache
 
 try:
     from collections import Counter

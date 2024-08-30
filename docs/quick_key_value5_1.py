@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from codernitydb3.database import Database
-from codernitydb3.tree_index import TreeBasedIndex
+from slitheringdb.database import Database
+from slitheringdb.tree_index import TreeBasedIndex
 
 import random
 

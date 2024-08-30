@@ -54,7 +54,7 @@ copyright = u'2011-2013, Codernity'
 #
 # The short X.Y version.
 
-from codernitydb3 import __version__
+from slitheringdb import __version__
 version = __version__
 # The full version, including alpha/beta/rc tags.
 release = __version__

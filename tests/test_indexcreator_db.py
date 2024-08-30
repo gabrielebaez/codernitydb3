@@ -21,12 +21,12 @@ from hashlib import md5
 from py.test import raises
 from pytest import fixture
 
-from codernitydb3.indexcreator import Parser, IndexCreatorValueException, IndexCreatorFunctionException
-from codernitydb3.database import Database, RecordNotFound
-from codernitydb3.hash_index import HashIndex
-from codernitydb3.tree_index import TreeBasedIndex
-from codernitydb3.tree_index import MultiTreeBasedIndex
-from codernitydb3.hash_index import MultiHashIndex
+from slitheringdb.indexcreator import Parser, IndexCreatorValueException, IndexCreatorFunctionException
+from slitheringdb.database import Database, RecordNotFound
+from slitheringdb.hash_index import HashIndex
+from slitheringdb.tree_index import TreeBasedIndex
+from slitheringdb.tree_index import MultiTreeBasedIndex
+from slitheringdb.hash_index import MultiHashIndex
 
 # class db_set():
 # def __init__(self,t):

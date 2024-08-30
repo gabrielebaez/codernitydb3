@@ -20,8 +20,8 @@ from collections import defaultdict
 from functools import wraps
 from types import MethodType
 
-from codernitydb3.env import cdb_environment
-from codernitydb3.database import PreconditionsException, RevConflict, Database
+from slitheringdb.env import cdb_environment
+from slitheringdb.database import PreconditionsException, RevConflict, Database
 
 
 class th_safe_gen:

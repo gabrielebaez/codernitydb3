@@ -21,13 +21,13 @@ import random
 
 from functools import cmp_to_key
 
-from codernitydb3.database import Database, RecordDeleted, RecordNotFound
+from slitheringdb.database import Database, RecordDeleted, RecordNotFound
 
-from codernitydb3.hash_index import UniqueHashIndex
+from slitheringdb.hash_index import UniqueHashIndex
 
-from codernitydb3.tree_index import TreeBasedIndex
+from slitheringdb.tree_index import TreeBasedIndex
 
-from codernitydb3.debug_stuff import database_step_by_step
+from slitheringdb.debug_stuff import database_step_by_step
 
 
 def cmp(a, b):

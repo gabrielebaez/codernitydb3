@@ -18,7 +18,7 @@
 
 from setuptools import setup
 
-from codernitydb3 import __version__, __license__
+from slitheringdb import __version__, __license__
 
 with open('README.rst') as fhd:
     L_DESCR = fhd.read()

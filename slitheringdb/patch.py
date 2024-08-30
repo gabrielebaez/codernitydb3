@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from codernitydb3.misc import NONE
+from slitheringdb.misc import NONE
 
 
 def __patch(obj, name, new):
@@ -38,8 +38,8 @@ def patch_cache_lfu(lock_obj):
        It's internal codernitydb3 mechanizm, it will be called when needed
 
     """
-    from codernitydb3 import lfu_cache
-    from codernitydb3 import lfu_cache_with_lock
+    from slitheringdb import lfu_cache
+    from slitheringdb import lfu_cache_with_lock
     lfu_lock1lvl = lfu_cache_with_lock.create_cache1lvl(lock_obj)
     lfu_lock2lvl = lfu_cache_with_lock.create_cache2lvl(lock_obj)
     __patch(lfu_cache, 'cache1lvl', lfu_lock1lvl)
@@ -55,8 +55,8 @@ def patch_cache_rr(lock_obj):
        It's internal codernitydb3 mechanizm, it will be called when needed
 
     """
-    from codernitydb3 import rr_cache
-    from codernitydb3 import rr_cache_with_lock
+    from slitheringdb import rr_cache
+    from slitheringdb import rr_cache_with_lock
     rr_lock1lvl = rr_cache_with_lock.create_cache1lvl(lock_obj)
     rr_lock2lvl = rr_cache_with_lock.create_cache2lvl(lock_obj)
     __patch(rr_cache, 'cache1lvl', rr_lock1lvl)

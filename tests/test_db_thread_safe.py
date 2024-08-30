@@ -21,7 +21,7 @@ import random
 import pytest
 from threading import Thread
 
-from codernitydb3.database_thread_safe import ThreadSafeDatabase
+from slitheringdb.database_thread_safe import ThreadSafeDatabase
 
 from .shared import DB_Tests, WithAIndex
 from .hash_tests import HashIndexTests

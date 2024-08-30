@@ -23,7 +23,7 @@ import inspect
 import pickle
 from functools import wraps
 
-from codernitydb3.tree_index import TreeBasedIndex
+from slitheringdb.tree_index import TreeBasedIndex
 
 
 class DebugTreeBasedIndex(TreeBasedIndex):

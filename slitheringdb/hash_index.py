@@ -22,21 +22,21 @@ import io
 import struct
 import shutil
 
-from codernitydb3.index import (Index, IndexException, DocIdNotFound,
+from slitheringdb.index import (Index, IndexException, DocIdNotFound,
                                 ElemNotFound, TryReindexException,
                                 IndexPreconditionsException)
 
-from codernitydb3.rr_cache import cache1lvl
-from codernitydb3.misc import random_hex_32
-from codernitydb3.storage import IU_Storage, DummyStorage
-from codernitydb3.env import cdb_environment
+from slitheringdb.rr_cache import cache1lvl
+from slitheringdb.misc import random_hex_32
+from slitheringdb.storage import IU_Storage, DummyStorage
+from slitheringdb.env import cdb_environment
 
 if cdb_environment.get('rlock_obj'):
-    from codernitydb3 import patch
+    from slitheringdb import patch
     patch.patch_cache_rr(cdb_environment['rlock_obj'])
 
 try:
-    from codernitydb3 import __version__
+    from slitheringdb import __version__
 except ImportError:
     from __init__ import __version__
 

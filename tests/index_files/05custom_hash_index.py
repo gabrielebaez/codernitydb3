@@ -13,7 +13,7 @@ from hashlib import md5
 # custom db code start
 
 # custom index code start
-from codernitydb3 import rr_cache
+from slitheringdb import rr_cache
 # source of classes in index.classes_code
 # index code start
 

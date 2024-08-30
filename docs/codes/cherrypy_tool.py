@@ -2,7 +2,7 @@
 
 import cherrypy
 from cherrypy.process import plugins
-from codernitydb3.database_thread_safe import ThreadSafeDatabase as Database
+from slitheringdb.database_thread_safe import ThreadSafeDatabase as Database
 
 
 class codernitydb3Plugin(plugins.SimplePlugin):

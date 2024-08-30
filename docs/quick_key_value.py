@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from codernitydb3.database import Database
+from slitheringdb.database import Database
 
 
 def main():

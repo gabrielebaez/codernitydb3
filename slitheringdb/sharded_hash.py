@@ -19,9 +19,9 @@
 import uuid
 from random import getrandbits
 
-from codernitydb3.hash_index import UniqueHashIndex, HashIndex
-from codernitydb3.sharded_index import ShardedIndex
-from codernitydb3.index import IndexPreconditionsException
+from slitheringdb.hash_index import UniqueHashIndex, HashIndex
+from slitheringdb.sharded_index import ShardedIndex
+from slitheringdb.index import IndexPreconditionsException
 
 
 class IU_ShardedUniqueHashIndex(ShardedIndex):

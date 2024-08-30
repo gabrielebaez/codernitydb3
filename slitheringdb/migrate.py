@@ -16,17 +16,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from codernitydb3.database_safe_shared import SafeDatabase
-from codernitydb3.env import cdb_environment
-
-try:
-    from gevent.lock import RLock
-except ImportError:
-    raise NotImplementedError
-
-cdb_environment['mode'] = "gevent"
-cdb_environment['rlock_obj'] = RLock
+import shutil
+import os
+from slitheringdb.database import Database
 
 
-class GeventDatabase(SafeDatabase):
-    pass
+def migrate(source, destination):
+    """
+    Very basic for now
+    """
+    dbs = Database(source)
+    dbt = Database(destination)
+    dbs.open()
+    dbt.create()
+    dbt.close()
+    for curr in os.listdir(os.path.join(dbs.path, '_indexes')):
+        if curr != '00id.py':
+            shutil.copyfile(os.path.join(dbs.path, '_indexes', curr),
+                            os.path.join(dbt.path, '_indexes', curr))
+    dbt.open()
+    for c in dbs.all('id'):
+        del c['_rev']
+        dbt.insert(c)
+    return True
+
+
+if __name__ == '__main__':
+    import sys
+    migrate(sys.argv[1], sys.argv[2])

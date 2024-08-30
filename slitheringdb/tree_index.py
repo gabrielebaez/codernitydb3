@@ -23,13 +23,13 @@ import io
 import shutil
 # from ipdb import set_trace
 
-from codernitydb3.env import cdb_environment
-from codernitydb3.storage import IU_Storage
-from codernitydb3.index import Index, IndexException, DocIdNotFound, ElemNotFound, TryReindexException
-from codernitydb3.rr_cache import cache1lvl, cache2lvl
+from slitheringdb.env import cdb_environment
+from slitheringdb.storage import IU_Storage
+from slitheringdb.index import Index, IndexException, DocIdNotFound, ElemNotFound, TryReindexException
+from slitheringdb.rr_cache import cache1lvl, cache2lvl
 
 if cdb_environment.get('rlock_obj'):
-    from codernitydb3 import patch
+    from slitheringdb import patch
     patch.patch_cache_rr(cdb_environment['rlock_obj'])
 
 tree_buffer_size = io.DEFAULT_BUFFER_SIZE
