@@ -3,9 +3,9 @@ SlitheringDB - a Pythonic database
 
 SlitheringDB is based on CodernityDB by `Codernity Labs`_.
 
-SlitheringDB is opensource, pure python, multiplatform, schema-less, `NoSQL <http://en.wikipedia.org/wiki/NoSQL>`_ database. It has optional support for HTTP server version (SlitheringDB-server), and also Python client library (SlitheringDB-client).
+SlitheringDB is an open-source, pure python, schema-less, `NoSQL <http://en.wikipedia.org/wiki/NoSQL>`_ database. It can operate in embeded and server mode (SlitheringDB-server).
 
-You can call it a more advanced key-value database. With multiple key-values indexes in the same engine.
+You can call it a more advanced key-value database With multi-index support.
 
 
 Key features
@@ -14,7 +14,7 @@ Key features
 * Native python database
 * Multiple indexes
 * Fast (more than 50 000 insert operations per second see Speed in documentation for details)
-* Embeded mode (default) and Server (CodernityDB-HTTP), with client library (CodernityDB-PyClient) that aims to be 100% compatible with embeded one.
+* Embeded mode (default) and Server (SlitheringDB-server), with client library (SlitheringDB-client) that aims to be 100% compatible with embeded one.
 * Easy way to implement custom Storage
 * Sharding support
 
@@ -22,20 +22,17 @@ Key features
 Install
 -------
 
+Note: Very early version, things will break.
+
 from sources::
 
    git clone ssh://git@github.com:gabrielebaez/slitheringdb.git
    cd slitheringdb
    python setup.py install
 
+
 License
 -------
-
-Copyright 2024 Gabriel E. Báez (https://github.com/gabrielebaez)
-
-Copyright 2020 Nick M. (https://github.com/nickmasster)
-
-Copyright 2011-2013 Codernity (http://codernity.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
